@@ -8,23 +8,6 @@ The API is hosted at: https://email-service-9f6r.onrender.com
 
 ## Usage
 
-### Endpoint
-
-`POST /send-email/:recipientEmail`
-
-### Parameters
-
-- `:recipientEmail` (URL parameter): The email address where the form data should be sent.
-
-### Request Body
-
-The request body should be `multipart/form-data` and can include any form fields you want to send. Two special fields are:
-
-- `pageTitle`: The title of the page where the form was submitted (optional).
-- `pageUrl`: The URL of the page where the form was submitted (optional).
-
-All other fields will be included in the email as form data.
-
 ### Example Usage (Frontend)
 
 Here's how you can use this API in your frontend code:
@@ -59,3 +42,21 @@ const onSubmit = async (event) => {
   }
 };
 ```
+
+### Endpoint
+
+`POST /send-email/:recipientEmail`
+
+### Parameters
+
+- `:recipientEmail` (URL parameter): The email address where the form data should be sent.
+
+### Request Body
+
+The request body should be `multipart/form-data` and can include any form fields you want to send. Two special fields are:
+
+- `pageTitle`: The title of the page where the form was submitted (optional).
+- `pageUrl`: The URL of the page where the form was submitted (optional).
+
+All other fields will be included in the email as form data.
+
