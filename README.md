@@ -20,7 +20,7 @@ const onSubmit = async (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
 
-  // Add page information
+  // Add page information using these keywords ( "pageTitle", "pageUrl" )
   formData.append("pageTitle", "Contact Form - Homepage");
   formData.append("pageUrl", window.location.href);
 
