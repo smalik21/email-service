@@ -30,7 +30,10 @@ All other fields will be included in the email as form data.
 Here's how you can use this API in your frontend code:
 
 ```javascript
-const onSubmit = async (event, recipientEmail) => {
+
+const recipientEmail = 'enter the recipient email'
+
+const onSubmit = async (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
 
