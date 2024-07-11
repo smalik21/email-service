@@ -93,7 +93,7 @@ app.post('/send-email/:recipientEmail', upload.none(), async (req, res) => {
     // Send the email
     await transporter.sendMail(mailOptions);
 
-    res.status(200).json({ message: 'Form data sent successfully' });
+    res.status(200).json({ success: 'Form data sent successfully' });
   } catch (error) {
     console.error('Error:', error);
     res.status(500).json({ message: 'An error occurred while processing your request' });
