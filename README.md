@@ -14,8 +14,6 @@ Here's how you can use this API in your frontend code:
 
 ```javascript
 
-const recipientEmail = 'enter the recipient email'
-
 const onSubmit = async (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
@@ -23,6 +21,8 @@ const onSubmit = async (event) => {
   // Add page information using these keywords ( "pageTitle", "pageUrl" )
   formData.append("pageTitle", "Contact Form - Homepage");
   formData.append("pageUrl", window.location.href);
+
+  const recipientEmail = 'enter the recipient email'
 
   try {
     const response = await fetch(`https://email-service-9f6r.onrender.com/send-email/${encodeURIComponent(recipientEmail)}`, {
