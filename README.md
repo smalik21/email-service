@@ -2,10 +2,6 @@
 
 This API allows you to submit form data and send it via email to a specified recipient. It's designed to be easily integrated with frontend applications.
 
-## API Endpoint
-
-The API is hosted at: https://email-service-9f6r.onrender.com
-
 ## Usage
 
 ### Example Usage (Frontend)
@@ -25,7 +21,7 @@ const onSubmit = async (event) => {
   const recipientEmail = 'enter the recipient email'
 
   try {
-    const response = await fetch(`https://email-service-9f6r.onrender.com/send-email/${encodeURIComponent(recipientEmail)}`, {
+    const response = await fetch(`{HOSTED_SERVER_URL}/send-email/${encodeURIComponent(recipientEmail)}`, {
       method: "POST",
       body: formData
     });
